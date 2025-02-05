@@ -83,7 +83,7 @@ class JointDataset(object):
         for ffhq_r_path in _ffhq_r_paths:
             filename = os.path.basename(ffhq_r_path)
             ffhq_path = os.path.join(self.ffhq_folder, str(filename))
-            if ffhq_path in self.ffhq_bboxes_maps:
+            if filename in self.ffhq_bboxes_maps:
                 self.ffhq_paths.append(str(ffhq_path))
                 self.ffhq_r_paths.append(str(ffhq_r_path))
             
@@ -92,7 +92,8 @@ class JointDataset(object):
             index = random.randint(0, len(self.ffhq_r_paths) - 1)
             ffhq_path = self.ffhq_paths[index]
             ffhq_r_path = self.ffhq_r_paths[index]
-            ffhq_bboxes = self.ffhq_bboxes_maps[ffhq_path]
+            basename = os.path.basename(ffhq_path)
+            ffhq_bboxes = self.ffhq_bboxes_maps[basename]
             
             if len(ffhq_bboxes) != 1:
                 continue
@@ -101,7 +102,7 @@ class JointDataset(object):
 
             img_ffhq = read_image(ffhq_path)
             img_ffhq_r = read_image(ffhq_r_path)
-            basename = os.path.basename(ffhq_path)
+
             skin_path = os.path.join("data/skins", basename)
             skin_mask = read_image(skin_path)
                     

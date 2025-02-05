@@ -102,7 +102,7 @@ class JointDataset(object):
             img_ffhq = read_image(ffhq_path)
             img_ffhq_r = read_image(ffhq_r_path)
             basename = os.path.basename(ffhq_path)
-            skin_path = os.path.join("../ffhq_skins", basename)
+            skin_path = os.path.join("data/skins", basename)
             skin_mask = read_image(skin_path)
                     
             roi_origin = utils.get_roi(img_ffhq, bbox)

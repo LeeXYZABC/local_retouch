@@ -34,7 +34,7 @@ the detector and inpainting model will be cached in checkpoints dir.
 
 ## acknowledgements
 We thank the following projects for their work that enabled us to collect the data and define the network.
-1. [skin_retouching](https://github.com/modelscope/modelscope/tree/master/modelscope/models/cv/skin_retouching) for detection and inpainting network and related processing utils
+1. [skin_retouching](https://github.com/modelscope/modelscope/tree/master/modelscope/models/cv/skin_retouching)
 2. [DiceLoss](https://github.com/hubutui/DiceLoss-PyTorch/blob/master/loss.py)
 3. [total variation Loss](https://github.com/jxgu1016/Total_Variation_Loss.pytorch)
 4. [CodeFormer](https://github.com/sczhou/CodeFormer)

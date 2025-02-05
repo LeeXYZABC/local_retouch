@@ -4,6 +4,9 @@ __pycache__/
 *$py.class
 
 pretrain_checkpoints/*.pth
+data/skins/*
+data/ffhq/*
+data/ffhqr/*
 
 # C extensions
 *.so

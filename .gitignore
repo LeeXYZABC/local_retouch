@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+pretrain_checkpoints/*.pth
+
 # C extensions
 *.so
 
